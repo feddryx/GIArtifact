@@ -103,8 +103,6 @@ end
 	if not ArtifactResult then InvalidResponse(); goto getChoice;
 	elseif ArtifactResult == #List then
 		goto getResource;
-	else
-		ArtName = res.Artifacts[ArtifactResult].Name;
 	end
 
 ::getType::
@@ -117,13 +115,10 @@ end
 	if not TypeResult then InvalidResponse(); goto getType;
 	elseif TypeResult == #List then
 		goto getChoice;
-	else
-		ArtType = res.Artifacts[ArtifactResult].Type[TypeResult];
 	end
 
 ::getMainStat::
-	if TypeResult <= 2 then
-		MSResult = 1; ArtMainStat = res.Mainstats[TypeResult].Name[MSResult];
+	if TypeResult <= 2 then MSResult = 1;
 	else
 		List = {};
 		for x = 1, #res.Mainstats[TypeResult].Name do
@@ -134,8 +129,6 @@ end
 		if not MSResult then InvalidResponse(); goto getMainStat;
 		elseif MSResult == #List then
 			goto getType;
-		else
-			ArtMainStat = res.Mainstats[TypeResult].Name[MSResult];
 		end
 	end
 
@@ -206,7 +199,7 @@ end
 			elseif SSResult == 4 then
 				levelUp(4); goto rollSubStat;
 			elseif SSResult == 5 then 
-				resetLevel(); goto makeSubStat;
+				resetLevel(); goto makeArtRes;
 			elseif SSResult == 6 then
 				resetLevel(); goto getType;
 			end
