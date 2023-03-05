@@ -198,7 +198,7 @@ end
 		elseif SSResult == 4 then
 			levelUp(4); goto rollSubStat;
 		elseif SSResult == 5 then 
-			resetLevel(); goto makeArtRes;
+			resetLevel(); goto makeSubStat;
 		elseif SSResult == 6 then
 			resetLevel(); goto getType;
 		end
