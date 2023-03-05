@@ -188,21 +188,19 @@ end
 		ArtSubStat[5] = "🔄Reroll";
 		ArtSubStat[6] = "↩️Back";
 		SSResult = gg.choice(ArtSubStat, nil, Artifact["Name"].." | "..Artifact["Type"].."\n"..Artifact.StatList[0].Type);
-		while true do
-			if not SSResult then InvalidResponse(); resetLevel(true); goto rollSubStat;
-			elseif SSResult == 1 then
-				levelUp(1); goto rollSubStat;
-			elseif SSResult == 2 then
-				levelUp(2); goto rollSubStat;
-			elseif SSResult == 3 then
-				levelUp(3); goto rollSubStat;
-			elseif SSResult == 4 then
-				levelUp(4); goto rollSubStat;
-			elseif SSResult == 5 then 
-				resetLevel(); goto makeArtRes;
-			elseif SSResult == 6 then
-				resetLevel(); goto getType;
-			end
+		if not SSResult then InvalidResponse(); resetLevel(true); goto rollSubStat;
+		elseif SSResult == 1 then
+			levelUp(1); goto rollSubStat;
+		elseif SSResult == 2 then
+			levelUp(2); goto rollSubStat;
+		elseif SSResult == 3 then
+			levelUp(3); goto rollSubStat;
+		elseif SSResult == 4 then
+			levelUp(4); goto rollSubStat;
+		elseif SSResult == 5 then 
+			resetLevel(); goto makeArtRes;
+		elseif SSResult == 6 then
+			resetLevel(); goto getType;
 		end
 	end
 	
