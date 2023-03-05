@@ -61,7 +61,7 @@ return {
             ["Name"]="Glacier and Snowfield",
             ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
         }, {
-            ["ID"]={75543, 75523, 72553, 75513, 75533},
+            ["ID"]={75543, 75523, 75553, 75513, 75533},
             ["Name"]="Gladiator's Finale",
             ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
         }, {
