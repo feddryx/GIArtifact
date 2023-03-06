@@ -172,8 +172,7 @@ end
 	
 ::rollSubStat::
 	if not ArtSubStat then
-		ArtSubStat = {}; 
-		if not Artifact["defaultStat"] then backupStat(); end
+		ArtSubStat = {}; backupStat();
 	end
 	for x = 1, 4 do
 		if not currentLevel then
@@ -207,7 +206,7 @@ end
 ::showResult::
 	ArtResult = Artifact["Name"].." | "..Artifact["Type"].."\n"..Artifact.StatList[0].Type .."\n";
 	for x = 1, 4 do
-		ArtResult = ArtResult.."\n".. ArtSubStat[x]:match("^(.-%+)")..string.gsub(ArtSubStat[x], "%+.*%>%s", "+"):match(".*%+(.-)$");
+		ArtResult = ArtResult.."\n"..ArtSubStat[x]:match("^(.-%+)")..string.gsub(ArtSubStat[x], "%+.*%>%s", "+"):match(".*%+(.-)$");
 	end
 	ArtResult = gg.alert(ArtResult, "Copy", "↩️Back");
 	if ArtResult == 0 then InvalidResponse(); goto showResult;
