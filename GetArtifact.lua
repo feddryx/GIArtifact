@@ -207,9 +207,9 @@ end
 	for x = 1, 4 do
 		Prompt = Prompt.."\n"..ArtSubStat[x]:match("^(.-%+)")..string.gsub(ArtSubStat[x], "%+.*%>%s", "+"):match(".*%+(.-)$");
 	end
-	Result = gg.alert(Prompt, "Copy", "↩️Back");
-	if Result == 0 then InvalidResponse(); goto showResult;
-	elseif Result == 1 then
+	ResultChoices = gg.alert(Prompt, "Copy", "↩️Back");
+	if ResultChoices == 0 then InvalidResponse(); goto showResult;
+	elseif ResultChoices == 1 then
 		Artifact["command"] = "/g "..Artifact["ID"].." lv21 "..Artifact["StatList"][0].ID;
 		for x = 1, 4 do
 			Artifact["command"] = Artifact["command"].." "..Artifact["StatList"][x].ID;
@@ -221,6 +221,6 @@ end
 		end
 		gg.copyText(Artifact["command"], false);
 		print("Command copied!");
-	elseif Result == 2 then 
+	elseif ResultChoices == 2 then 
 		resetLevel(true); goto rollSubStat;
 	end
