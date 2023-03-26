@@ -52,9 +52,6 @@ return {
 			["ID"]={90543, 90523, 90553, 90513, 90533},
 			["Name"]="Heart of Depth"
 		}, {
-			["ID"]={30543, 30523, 30553, 30513, 30533},
-			["Name"]="Heart of Khvarena’s Brilliance"
-		}, {
 			["ID"]={95543, 95523, 95553, 95513, 95533},
 			["Name"]="Husk of Opulent Dreams"
 		}, {
@@ -114,6 +111,9 @@ return {
 		}, {
 			["ID"]={76543, 76523, 76553, 76513, 76533},
 			["Name"]="Viridescent Verener"
+		}, {
+			["ID"]={30543, 30523, 30553, 30513, 30533},
+			["Name"]="Vourukasha’s Glow"
 		}, {
 			["ID"]={77543, 77523, 77553, 77513, 77533},
 			["Name"]="Wanderer's Troupe"
