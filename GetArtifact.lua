@@ -210,7 +210,7 @@ end
 	Result = gg.alert(Prompt, "Copy", "↩️Back");
 	if Result == 0 then InvalidResponse(); goto showResult;
 	elseif Result == 1 then
-		Artifact["command"] = "/g "..Artifact["ID"].." lv20 "..Artifact["StatList"][0].ID;
+		Artifact["command"] = "/g "..Artifact["ID"].." lv21 "..Artifact["StatList"][0].ID;
 		for x = 1, 4 do
 			Artifact["command"] = Artifact["command"].." "..Artifact["StatList"][x].ID;
 			for i = 1, 5 do
