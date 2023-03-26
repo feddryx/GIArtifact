@@ -8,9 +8,9 @@ local function convert(num)
 end
 
 local function levelUp(num)
-	currentLevel = currentLevel+1;
+	Artifact["Level"] = Artifact["Level"]+1;
 	Artifact["StatRoll"][num]=math.random(#Artifact.SubStat[num].ID);
-	Artifact["StatList"][num][currentLevel]={
+	Artifact["StatList"][num][Artifact["Level"]]={
 		["ID"]=Artifact.SubStat[num].ID[Artifact.StatRoll[num]],
 		["Type"]=Artifact.SubStat[num].Type,
 		["Value"]=Artifact.SubStat[num].Value[Artifact.StatRoll[num]],
@@ -47,7 +47,7 @@ local function backupStat()
 end
 
 local function resetLevel(cond)
-	currentLevel = nil; ArtSubStat = nil;
+	Artifact["Level"] = nil; ArtSubStat = nil;
 	if cond == true then
 		Artifact["StatList"] = Artifact["DefaultStat"];
 	end
@@ -69,7 +69,7 @@ end
 
 ::getResource::
 	if res then
-		resFile = gg.EXT_CACHE_DIR.."/"..math.random(1,999999);
+		resFile = gg.EXT_CACHE_DIR.."/.giart"..math.random(1,999999);
 	else
 		resFile = gg.EXT_CACHE_DIR.."/GIArtifact";
 	end
@@ -99,16 +99,16 @@ end
 		List[x] = "•"..res.Artifacts[x].Name;
 	end
 	List[#List+1] = "Sync resource file";
-	ArtifactResult = gg.choice(List, nil, "Choose Artifact:");
-	if not ArtifactResult then InvalidResponse(); goto getChoice;
-	elseif ArtifactResult == #List then
+	Result = gg.choice(List, nil, "Choose Artifact:");
+	if not Result then InvalidResponse(); goto getChoice;
+	elseif Result == #List then
 		goto getResource;
 	end
 
 ::getType::
 	List = {};
 	for x = 1, 5 do
-		List[x] = "•"..res.Artifacts[ArtifactResult].Type[x];
+		List[x] = "•"..res.Mainstats[x].Type;
 	end
 	List[#List+1] = "↩️Back";
 	TypeResult = gg.choice(List);
@@ -134,10 +134,9 @@ end
 
 ::makeArtRes::
 	Artifact = {
-		["ID"] = res.Artifacts[ArtifactResult].ID[TypeResult],
-		["Name"] = res.Artifacts[ArtifactResult].Name,
-		["Type"] = res.Artifacts[ArtifactResult].Type[TypeResult],
-		["MainStat"] = res.Mainstats[TypeResult],
+		["ID"] = res.Artifacts[Result].ID[TypeResult],
+		["Name"] = res.Artifacts[Result].Name,
+		["Type"] = res.Mainstats[TypeResult].Type,
 		["SubStat"] = {},
 		["StatRoll"] = {[0]=MSResult},
 		["StatList"]={
@@ -175,15 +174,15 @@ end
 		ArtSubStat = {}; backupStat();
 	end
 	for x = 1, 4 do
-		if not currentLevel then
+		if not Artifact["Level"] then
 			ArtSubStat[x] = "•"..Artifact.SubStat[x].Type.."+"..convert(Artifact["StatList"][x].Value);
-		elseif Artifact["StatList"][x][currentLevel] then
-			Artifact["StatList"][x].Value = Artifact["StatList"][x].Value + Artifact["StatList"][x][currentLevel].Value;
+		elseif Artifact["StatList"][x][Artifact["Level"]] then
+			Artifact["StatList"][x].Value = Artifact["StatList"][x].Value + Artifact["StatList"][x][Artifact["Level"]].Value;
 			ArtSubStat[x] = ArtSubStat[x].." >> "..convert(Artifact["StatList"][x].Value);
 		end
 	end
-	if not currentLevel then currentLevel = 0; end
-	if currentLevel < 5 then
+	if not Artifact["Level"] then Artifact["Level"] = 0; end
+	if Artifact["Level"] < 5 then
 		ArtSubStat[5] = "🔄Reroll";
 		ArtSubStat[6] = "↩️Back";
 		SSResult = gg.choice(ArtSubStat, nil, Artifact["Name"].." | "..Artifact["Type"].."\n"..Artifact.StatList[0].Type);
@@ -204,24 +203,24 @@ end
 	end
 	
 ::showResult::
-	ArtResult = Artifact["Name"].." | "..Artifact["Type"].."\n"..Artifact.StatList[0].Type .."\n";
+	Prompt = Artifact["Name"].." | "..Artifact["Type"].."\n"..Artifact.StatList[0].Type.."\n";
 	for x = 1, 4 do
-		ArtResult = ArtResult.."\n"..ArtSubStat[x]:match("^(.-%+)")..string.gsub(ArtSubStat[x], "%+.*%>%s", "+"):match(".*%+(.-)$");
+		Prompt = Prompt.."\n"..ArtSubStat[x]:match("^(.-%+)")..string.gsub(ArtSubStat[x], "%+.*%>%s", "+"):match(".*%+(.-)$");
 	end
-	ArtResult = gg.alert(ArtResult, "Copy", "↩️Back");
-	if ArtResult == 0 then InvalidResponse(); goto showResult;
-	elseif ArtResult == 1 then
-		local command = "/g "..Artifact["ID"].." "..Artifact["StatList"][0].ID;
+	Result = gg.alert(Prompt, "Copy", "↩️Back");
+	if Result == 0 then InvalidResponse(); goto showResult;
+	elseif Result == 1 then
+		Artifact["command"] = "/g "..Artifact["ID"].." "..Artifact["StatList"][0].ID;
 		for x = 1, 4 do
-			command = command.." "..Artifact["StatList"][x].ID;
+			Artifact["command"] = Artifact["command"].." "..Artifact["StatList"][x].ID;
 			for i = 1, 5 do
 				if Artifact["StatList"][x][i] then
-					command = command.." "..Artifact["StatList"][x][i].ID;
+					Artifact["command"] = Artifact["command"].." "..Artifact["StatList"][x][i].ID;
 				end
 			end
 		end
-		gg.copyText(command, false);
+		gg.copyText(Artifact["command"], false);
 		print("Command copied!");
-	elseif ArtResult == 2 then 
+	elseif Result == 2 then 
 		resetLevel(true); goto rollSubStat;
 	end
