@@ -99,9 +99,9 @@ end
 		List[x] = "•"..res.Artifacts[x].Name;
 	end
 	List[#List+1] = "Sync resource file";
-	Result = gg.choice(List, nil, "Choose Artifact:");
-	if not Result then InvalidResponse(); goto getChoice;
-	elseif Result == #List then
+	ArtResult = gg.choice(List, nil, "Choose Artifact:");
+	if not ArtResult then InvalidResponse(); goto getChoice;
+	elseif ArtResult == #List then
 		goto getResource;
 	end
 
@@ -134,8 +134,8 @@ end
 
 ::makeArtRes::
 	Artifact = {
-		["ID"] = res.Artifacts[Result].ID[TypeResult],
-		["Name"] = res.Artifacts[Result].Name,
+		["ID"] = res.Artifacts[ArtResult].ID[TypeResult],
+		["Name"] = res.Artifacts[ArtResult].Name,
 		["Type"] = res.Mainstats[TypeResult].Type,
 		["SubStat"] = {},
 		["StatRoll"] = {[0]=MSResult},
