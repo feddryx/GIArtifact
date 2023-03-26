@@ -121,24 +121,24 @@ return {
 	},
 	["Mainstats"]={
 		{
-			["ID"]={10001},
+			["ID"]={14001},
 			["Name"]={"HP"},
 			["Type"]="Flower of Life"
 		}, {
-			["ID"]={10003},
+			["ID"]={12001},
 			["Name"]={"ATK"},
 			["Type"]="Plume of Death"
 		}, {
-			["ID"]={10002, 10004, 10006, 10007, 10008},
-			["Name"]={"HP%", "ATK%", "DEF%", "Energy Recharge", "Elemental Mastery"},
+			["ID"]={10001, 10002, 10003, 10004, 10005, 10006, 10007, 10008, 10009, 10010, 10011, 10012, 10013, 10014, 10015},
+			["Name"]={"HP", "HP%", "ATK", "ATK%", "DEF", "DEF%", "Energy Recharge", "Elemental Mastery", "Pyro RES", "Electro RES", "Cryo RES", "Hydro RES", "Anemo RES", "Geo RES", "Dendro RES", "Physical RES"},
 			["Type"]="Sands of Eon"
 		}, {
-			["ID"]={10002, 10004, 10006, 10008, 15008, 15009, 15010, 15011, 15012, 15013, 15014, 15015},
-			["Name"]={"HP%", "ATK%", "DEF%", "Elemental Mastery", "Pyro DMG Bonus", "Electro DMG Bonus", "Cryo DMG Bonus", "Hydro DMG Bonus", "Anemo DMG Bonus", "Geo DMG Bonus", "Dendro DMG Bonus", "Physical DMG Bonus"},
+			["ID"]={15001, 15002, 15003, 15004, 15005, 15006, 15008, 15008, 15009, 15010, 15011, 15012, 15013, 15014, 15015},
+			["Name"]={"HP", "HP%", "ATK", "ATK%", "DEF", "DEF%", "Elemental Mastery", "Pyro DMG Bonus", "Electro DMG Bonus", "Cryo DMG Bonus", "Hydro DMG Bonus", "Anemo DMG Bonus", "Geo DMG Bonus", "Dendro DMG Bonus", "Physical DMG Bonus"},
 			["Type"]="Goblet of Eonothem"
 		}, {
-			["ID"]={10002, 10004, 10006, 10008, 13007, 13008, 13009},
-			["Name"]={"HP%", "ATK%", "DEF%", "Elemental Mastery", "CRIT Rate", "CRIT DMG", "Healing Bonus"},
+			["ID"]={13001, 13002, 13003, 13004, 13005, 13006, 13007, 13008, 13009, 13010},
+			["Name"]={"HP", "HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Healing Bonus", "Elemental Mastery"},
 			["Type"]="Circlet of Logos"
 		}
 	},
