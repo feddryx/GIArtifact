@@ -224,3 +224,6 @@ end
 	elseif Result == 2 then 
 		resetLevel(true); goto rollSubStat;
 	end
+
+::exit::
+os.exit()
