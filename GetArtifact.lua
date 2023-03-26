@@ -4,7 +4,7 @@ local function convert(num)
 	else
 		num = string.match(num + (2^52 + 2^51) - (2^52 + 2^51), "(.-)%.");
 	end
-	return num
+	return num;
 end
 
 local function levelUp(num)
@@ -224,6 +224,3 @@ end
 	elseif Result == 2 then 
 		resetLevel(true); goto rollSubStat;
 	end
-
-::exit::
-os.exit()
