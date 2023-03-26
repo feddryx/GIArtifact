@@ -2,152 +2,121 @@ return {
     ["Artifacts"]={
         {
             ["ID"]={88543, 88523, 88553, 88513, 88533},
-            ["Name"]="Archaic Petra",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Archaic Petra"
         }, {
             ["ID"]={55543, 55523, 55553, 55513, 55533},
-            ["Name"]="Berserker",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Berserker"
         }, {
             ["ID"]={71543, 71523, 71553, 71513, 71533},
-            ["Name"]="Blizzard Slayer",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Blizzard Slayer"
         }, {
             ["ID"]={82543, 82523, 82553, 82513, 82533},
-            ["Name"]="Bloodstained Chivalry",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Bloodstained Chivalry"
         }, {
             ["ID"]={52543, 52523, 52553, 52513, 52533},
-            ["Name"]="Brave Heart",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Brave Heart"
         }, {
             ["ID"]={80543, 80523, 80553, 80513, 80533},
-            ["Name"]="Crimson of the Witch",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Crimson of the Witch"
         }, {
             ["ID"]={20543, 20523, 20553, 20513, 20533},
-            ["Name"]="Deepwood Memories",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Deepwood Memories"
         }, {
             ["ID"]={53543, 53523, 53553, 53513, 53533},
-            ["Name"]="Defender's Will",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Defender's Will"
         }, {
             ["ID"]={27543, 27523, 27553, 27513, 27533},
-            ["Name"]="Desert Pavilion Chronicle",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Desert Pavilion Chronicle"
         }, {
             ["ID"]={98543, 98523, 98553, 98513, 98533},
-            ["Name"]="Echoes of an Offering",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Echoes of an Offering"
         }, {
             ["ID"]={94543, 94523, 94553, 94513, 94533},
-            ["Name"]="Emblem of Severed Fate",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Emblem of Severed Fate"
         }, {
             ["ID"]={28543, 28523, 28553, 28513, 28533},
-            ["Name"]="Flower of Paradise Lost",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Flower of Paradise Lost"
         }, {
             ["ID"]={58543, 58523, 58553, 58513, 58533},
-            ["Name"]="Gambler",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Gambler"
         }, {
             ["ID"]={21543, 21523, 21553, 21513, 21533},
-            ["Name"]="Gilded Dreams",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Gilded Dreams"
         }, {
             ["ID"]={78543, 78523, 78553, 78513, 78533},
-            ["Name"]="Glacier and Snowfield",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Glacier and Snowfield"
         }, {
             ["ID"]={75543, 75523, 75553, 75513, 75533},
-            ["Name"]="Gladiator's Finale",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Gladiator's Finale"
         }, {
             ["ID"]={90543, 90523, 90553, 90513, 90533},
-            ["Name"]="Heart of Depth",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Heart of Depth"
+        }, {
+            ["ID"]={30543, 30523, 30553, 30513, 30533},
+            ["Name"]="Heart of Khvarena’s Brilliance"
         }, {
             ["ID"]={95543, 95523, 95553, 95513, 95533},
-            ["Name"]="Husk of Opulent Dreams",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Husk of Opulent Dreams"
         }, {
             ["ID"]={57543, 57523, 57553, 57513, 57533},
-            ["Name"]="Instructor",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Instructor"
         }, {
             ["ID"]={73543, 73523, 73553, 73513, 73533},
-            ["Name"]="Lavawalker",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Lavawalker"
         }, {
             ["ID"]={74543, 74523, 74553, 74513, 74533},
-            ["Name"]="Maiden Beloved",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Maiden Beloved"
         }, {
             ["ID"]={56543, 56523, 56553, 56513, 56533},
-            ["Name"]="Martial Artist",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Martial Artist"
         }, {
             ["ID"]={81543, 81523, 81553, 81513, 81533},
-            ["Name"]="Noblesse Oblige",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Noblesse Oblige"
+        }, {
+            ["ID"]={29543, 29523, 29553, 29513, 29533},
+            ["Name"]="Nymph’s Dream"
         }, {
             ["ID"]={96543, 96523, 96553, 96513, 96533},
-            ["Name"]="Ocean-Hued Clam",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Ocean-Hued Clam"
         }, {
             ["ID"]={92543, 92523, 92553, 92513, 92533},
-            ["Name"]="Pale Flame",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Pale Flame"
         }, {
             ["ID"]={51543, 51523, 51553, 51513, 51533},
-            ["Name"]="Resolution of Sojourner",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Resolution of Sojourner"
         }, {
             ["ID"]={89543, 89523, 89553, 89513, 89533},
-            ["Name"]="Retracing Bolide",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Retracing Bolide"
         }, {
             ["ID"]={62543, 62523, 62553, 62513, 62533},
-            ["Name"]="Scholar",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Scholar"
         }, {
             ["ID"]={93543, 93523, 93553, 93513, 93533},
-            ["Name"]="Shimenawa's Reminiscence",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Shimenawa's Reminiscence"
         }, {
             ["ID"]={91543, 91523, 91553, 91513, 91533},
-            ["Name"]="Tenacity of the Millelith",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Tenacity of the Millelith"
         }, {
             ["ID"]={59543, 59523, 59553, 59513, 59533},
-            ["Name"]="The Exile",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="The Exile"
         }, {
             ["ID"]={79543, 79523, 79553, 79513, 79533},
-            ["Name"]="Thundering Fury",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Thundering Fury"
         }, {
             ["ID"]={72543, 72523, 72553, 72513, 72533},
-            ["Name"]="Thundersoother",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Thundersoother"
         }, {
             ["ID"]={54543, 54523, 54553, 54513, 54533},
-            ["Name"]="Tiny Miracle",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Tiny Miracle"
         }, {
             ["ID"]={97543, 97523, 97553, 97513, 97533},
-            ["Name"]="Vermillion Hereafter",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Vermillion Hereafter"
         }, {
             ["ID"]={76543, 76523, 76553, 76513, 76533},
-            ["Name"]="Viridescent Verener",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Viridescent Verener"
         }, {
             ["ID"]={77543, 77523, 77553, 77513, 77533},
-            ["Name"]="Wanderer's Troupe",
-            ["Type"]={"Flower of Life", "Plume of Death", "Sands of Eon", "Goblet of Eonothem", "Circlet of Logos"}
+            ["Name"]="Wanderer's Troupe"
         }
     },
     ["Mainstats"]={
