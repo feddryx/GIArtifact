@@ -22,28 +22,15 @@ local function backupStat()
 		[0]={
 			["ID"]=Artifact["StatList"][0]["ID"],
 			["Type"]=Artifact["StatList"][0]["Type"],
-		},
-		[1]={
-			["ID"]=Artifact["StatList"][1]["ID"],
-			["Type"]=Artifact["StatList"][1]["Type"],
-			["Value"]=Artifact["StatList"][1]["Value"],
-		},
-		[2]={
-			["ID"]=Artifact["StatList"][2]["ID"],
-			["Type"]=Artifact["StatList"][2]["Type"],
-			["Value"]=Artifact["StatList"][2]["Value"],
-		},
-		[3]={
-			["ID"]=Artifact["StatList"][3]["ID"],
-			["Type"]=Artifact["StatList"][3]["Type"],
-			["Value"]=Artifact["StatList"][3]["Value"],
-		},
-		[4]={
-			["ID"]=Artifact["StatList"][4]["ID"],
-			["Type"]=Artifact["StatList"][4]["Type"],
-			["Value"]=Artifact["StatList"][4]["Value"],
-		},
+		}
 	};
+	for i = 1, 4 do
+		Artifact["DefaultStat"][i]={
+			["ID"]=Artifact["StatList"][i]["ID"],
+			["Type"]=Artifact["StatList"][i]["Type"],
+			["Value"]=Artifact["StatList"][i]["Value"],
+		};
+	end
 end
 
 local function resetLevel(cond)
