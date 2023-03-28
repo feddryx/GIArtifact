@@ -170,8 +170,7 @@ end
 	end
 	if not Artifact["Level"] then Artifact["Level"] = 0; end
 	if Artifact["Level"] < 5 then
-		ArtSubStat[5] = "🔄Reroll";
-		ArtSubStat[6] = "↩️Back";
+		ArtSubStat[5] = "🔄Reroll"; ArtSubStat[6] = "↩️Back";
 		SSResult = gg.choice(ArtSubStat, nil, Artifact["Name"].." | "..Artifact["Type"].."\n"..Artifact.StatList[0].Type);
 		if not SSResult then InvalidResponse(); resetLevel(true); goto rollSubStat;
 		elseif SSResult == 1 then
