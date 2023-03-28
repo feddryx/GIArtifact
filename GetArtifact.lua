@@ -151,7 +151,7 @@ end
 				end
 			end
 			if Status == "Passed" then
-				Status = false; break
+				Status = nil; break
 			end
 		end
 	end
