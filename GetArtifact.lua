@@ -34,7 +34,7 @@ local function backupStat()
 end
 
 local function resetLevel(cond)
-	Artifact["Level"] = nil; ArtSubStat = nil;
+	Artifact["Level"], ArtSubStat = nil;
 	if cond == true then
 		Artifact["StatList"] = Artifact["DefaultStat"];
 	end
