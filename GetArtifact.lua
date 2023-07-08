@@ -35,7 +35,7 @@ end
 
 local function resetLevel(cond)
 	Artifact["Level"], ArtSubStat = nil;
-	if cond == true then
+	if cond then
 		Artifact["StatList"] = Artifact["DefaultStat"];
 	end
 end
@@ -56,7 +56,7 @@ end
 
 ::getResource::
 	if res then
-		resFile = gg.EXT_CACHE_DIR.."/.giart"..math.random(1,999999);
+		resFile = gg.EXT_CACHE_DIR.."/.giart"..os.time();
 	else
 		resFile = gg.EXT_CACHE_DIR.."/GIArtifact";
 	end
