@@ -77,7 +77,7 @@ end
 		end
 		res = nil; goto getResource;
 	else
-		res = load(io.input(resFile):read("*all"))();
+		res = loadfile(resFile)();
 	end
 
 ::getChoice::
