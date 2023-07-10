@@ -2,4 +2,5 @@
 Rolls an artifact by your own in Grasscutter server.
 
 ### Requirement
-* [GameGuardian](https://gameguardian.net)
+* [GameGuardian](https://gameguardian.net) for GG version
+* LuaSocket from LuaRocks and latest Lua version for CLI version
