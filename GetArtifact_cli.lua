@@ -114,7 +114,7 @@ end
 	end
 	List[#List+1] = "Sync resource file";
 	List[#List+1] = "Exit";
-	ArtResult = choice(List, "\mChoose Artifact:");
+	ArtResult = choice(List, "\nChoose Artifact:");
 	if not ArtResult then goto getChoice;
 	elseif ArtResult == #List-1 then
 		goto getResource;
