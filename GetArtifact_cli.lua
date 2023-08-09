@@ -5,36 +5,20 @@ local function choice(list, header)
 	for i, choose in ipairs(list) do
 		print("["..i.."]", choose);
 	end
-	local result = tonumber(io.read());
-	print("***")
-	if result and result >= 1 and result <= #list then
-		return result;
-	end
-end
-
-local function alert(text, right, middle, left)
-	print(text);
-	if right then
-		print("[1]", right);
-		if middle then
-			print("[2]", middle);
-			if left then
-				print("[3]", left);
-			end
+	local result = io.read();
+	for x = 1, #list do
+		if result and result == ""..x.."" then
+			result = tonumber(result);
 		end
 	end
-	local promptRes = tonumber(io.read());
 	print("***")
-	if right and promptRes == 1 then
-		return 1;
+	if type(result) == "number" and result <= #list then
+		return result;
+	else
+		if type(result) == "nil" then
+			os.exit();
+		end
 	end
-	if middle and promptRes == 2 then
-		return 2;
-	end
-	if left and promptRes == 3 then
-		return 3;
-	end
-	return 0;
 end
 
 local function convert(num)
@@ -86,8 +70,7 @@ end
 		resFile = ".cache/GIArtifact";
 	end
 	if not io.open(resFile) then
-		local http = require("socket.http");
-		local getRes, status = http.request("https://raw.githubusercontent.com/Fathoni267/GIArtifact/main/resources.lua");
+		local getRes, status = require("socket.http").request("https://raw.githubusercontent.com/Fathoni267/GIArtifact/main/resources.lua");
 		if status == 200 then
 			if string.match(getRes, "^return") then
 				io.output(resFile):write(getRes);
@@ -223,8 +206,8 @@ end
 	for x = 1, 4 do
 		Prompt = Prompt.."\n"..ArtSubStat[x]:match("^(.-%+)")..string.gsub(ArtSubStat[x], "%+.*%>%s", "+"):match(".*%+(.-)$");
 	end
-	ResultChoices = alert(Prompt, "Get Command", "Back");
-	if ResultChoices == 0 then goto showResult;
+	ResultChoices = choice({"Get Command", "Back"}, Prompt);
+	if not ResultChoices then goto showResult;
 	elseif ResultChoices == 1 then
 		Artifact["command"] = "/g "..Artifact["ID"].." lv21 "..Artifact["StatList"][0].ID;
 		for x = 1, 4 do
