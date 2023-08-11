@@ -33,7 +33,7 @@ end
 local function levelUp(num)
 	Artifact["Level"] = Artifact["Level"]+1;
 	Artifact["StatRoll"][num]=math.random(#Artifact.SubStat[num].ID);
-	Artifact["StatList"][num][Artifact["Level"]]={
+	Artifact["StatList"][num][Artifact.Level]={
 		["ID"]=Artifact.SubStat[num].ID[Artifact.StatRoll[num]],
 		["Type"]=Artifact.SubStat[num].Type,
 		["Value"]=Artifact.SubStat[num].Value[Artifact.StatRoll[num]],
@@ -59,7 +59,7 @@ end
 local function resetLevel(cond)
 	Artifact["Level"], ArtSubStat = nil;
 	if cond then
-		Artifact["StatList"] = Artifact["DefaultStat"];
+		Artifact["StatList"] = Artifact.DefaultStat;
 	end
 end
 
@@ -176,8 +176,8 @@ end
 	for x = 1, 4 do
 		if not Artifact["Level"] then
 			ArtSubStat[x] = "•"..Artifact.SubStat[x].Type.."+"..convert(Artifact["StatList"][x].Value);
-		elseif Artifact["StatList"][x][Artifact["Level"]] then
-			Artifact["StatList"][x].Value = Artifact["StatList"][x].Value + Artifact["StatList"][x][Artifact["Level"]].Value;
+		elseif Artifact["StatList"][x][Artifact.Level] then
+			Artifact["StatList"][x].Value = Artifact["StatList"][x].Value + Artifact["StatList"][x][Artifact.Level].Value;
 			ArtSubStat[x] = ArtSubStat[x].." >> "..convert(Artifact["StatList"][x].Value);
 		end
 	end
