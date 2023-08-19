@@ -14,10 +14,8 @@ local function choice(list, header)
 	print("***")
 	if type(result) == "number" and result <= #list then
 		return result;
-	else
-		if type(result) == "nil" then
-			os.exit();
-		end
+	elseif type(result) == "nil" then
+		os.exit();
 	end
 end
 

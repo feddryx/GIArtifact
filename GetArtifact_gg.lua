@@ -36,7 +36,7 @@ end
 local function resetLevel(cond)
 	Artifact["Level"], ArtSubStat = nil;
 	if cond then
-		Artifact["StatList"] = Artifact["DefaultStat"];
+		Artifact["StatList"] = Artifact.DefaultStat;
 	end
 end
 
