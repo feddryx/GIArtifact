@@ -126,7 +126,7 @@ end
 		["Type"] = res.Mainstats[TypeResult].Type,
 		["SubStat"] = {},
 		["StatRoll"] = {[0]=MSResult},
-		["StatList"]={
+		["StatList"] = {
 			[0]={
 				["ID"] = res.Mainstats[TypeResult].ID[MSResult],
 				["Type"] = res.Mainstats[TypeResult].Name[MSResult],
@@ -161,26 +161,20 @@ end
 		ArtSubStat = {}; backupStat();
 	end
 	for x = 1, 4 do
-		if not Artifact["Level"] then
+		if not Artifact.Level then
 			ArtSubStat[x] = "•"..Artifact.SubStat[x].Type.."+"..convert(Artifact["StatList"][x].Value);
 		elseif Artifact["StatList"][x][Artifact.Level] then
 			Artifact["StatList"][x].Value = Artifact["StatList"][x].Value + Artifact["StatList"][x][Artifact.Level].Value;
 			ArtSubStat[x] = ArtSubStat[x].." >> "..convert(Artifact["StatList"][x].Value);
 		end
 	end
-	if not Artifact["Level"] then Artifact["Level"] = 0; end
-	if Artifact["Level"] < 5 then
+	if not Artifact.Level then Artifact["Level"] = 0; end
+	if Artifact.Level < 5 then
 		ArtSubStat[5] = "🔄Reroll"; ArtSubStat[6] = "↩️Back";
 		SSResult = gg.choice(ArtSubStat, nil, Artifact["Name"].." | "..Artifact["Type"].."\n"..Artifact.StatList[0].Type);
 		if not SSResult then InvalidResponse(); resetLevel(true); goto rollSubStat;
-		elseif SSResult == 1 then
-			levelUp(1); goto rollSubStat;
-		elseif SSResult == 2 then
-			levelUp(2); goto rollSubStat;
-		elseif SSResult == 3 then
-			levelUp(3); goto rollSubStat;
-		elseif SSResult == 4 then
-			levelUp(4); goto rollSubStat;
+		elseif SSResult >= 1 and SSResult <= 4 then
+			levelUp(SSResult); goto rollSubStat;
 		elseif SSResult == 5 then 
 			resetLevel(); goto makeSubStat;
 		elseif SSResult == 6 then
@@ -205,7 +199,7 @@ end
 				end
 			end
 		end
-		gg.copyText(Artifact["command"], false);
+		gg.copyText(Artifact.command, false);
 		print("Command copied!");
 	elseif ResultChoices == 2 then 
 		resetLevel(true); goto rollSubStat;
