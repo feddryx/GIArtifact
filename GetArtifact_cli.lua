@@ -68,7 +68,7 @@ end
 		resFile = ".cache/GIArtifact";
 	end
 	if not io.open(resFile) then
-		local getRes, status = require("socket.http").request("https://raw.githubusercontent.com/Fathoni267/GIArtifact/main/resources.lua");
+		local getRes, status = require("socket.http").request("https://raw.githubusercontent.com/feddryx/GIArtifact/main/resources.lua");
 		if status == 200 then
 			if string.match(getRes, "^return") then
 				io.output(resFile):write(getRes);
