@@ -61,7 +61,7 @@ end
 		resFile = gg.EXT_CACHE_DIR.."/GIArtifact";
 	end
 	if not io.open(resFile) then
-		local getRes = gg.makeRequest("https://raw.githubusercontent.com/Fathoni267/GIArtifact/main/resources.lua")["content"];
+		local getRes = gg.makeRequest("https://raw.githubusercontent.com/feddryx/GIArtifact/main/resources.lua")["content"];
 		if getRes then
 			if string.match(getRes, "^return") then
 				io.output(resFile):write(getRes);
