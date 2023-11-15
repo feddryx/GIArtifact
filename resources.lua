@@ -73,6 +73,9 @@ return {
 			["ID"]={56543, 56523, 56553, 56513, 56533},
 			["Name"]="Martial Artist"
 		}, {
+			["ID"]={34543, 34523, 34553, 34513, 34533},
+			["Name"]="Nighttime Whispers in the Echoing Woods"
+		}, {
 			["ID"]={81543, 81523, 81553, 81513, 81533},
 			["Name"]="Noblesse Oblige"
 		}, {
@@ -96,6 +99,9 @@ return {
 		}, {
 			["ID"]={93543, 93523, 93553, 93513, 93533},
 			["Name"]="Shimenawa's Reminiscence"
+		}, {
+			["ID"]={33543, 33523, 33553, 33513, 33533},
+			["Name"]="Song of Days Past"
 		}, {
 			["ID"]={91543, 91523, 91553, 91513, 91533},
 			["Name"]="Tenacity of the Millelith"
