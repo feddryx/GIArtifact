@@ -37,6 +37,9 @@ return {
 			["ID"]={28543, 28523, 28553, 28513, 28533},
 			["Name"]="Flower of Paradise Lost"
 		}, {
+			["ID"]={35543, 35523, 35553, 35513, 35533},
+			["Name"]="Fragment of Harmonic Whimsy"
+		}, {
 			["ID"]={58543, 58523, 58553, 58513, 58533},
 			["Name"]="Gambler"
 		}, {
@@ -117,6 +120,9 @@ return {
 		}, {
 			["ID"]={54543, 54523, 54553, 54513, 54533},
 			["Name"]="Tiny Miracle"
+		}, {
+			["ID"]={36543, 36523, 36553, 36513, 36533},
+			["Name"]="Unfinished Reverie"
 		}, {
 			["ID"]={97543, 97523, 97553, 97513, 97533},
 			["Name"]="Vermillion Hereafter"
