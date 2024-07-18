@@ -85,6 +85,9 @@ return {
 			["ID"]={29543, 29523, 29553, 29513, 29533},
 			["Name"]="Nymph’s Dream"
 		}, {
+			["ID"]={38543, 38523, 38553, 38513, 38533},
+			["Name"]="Obsidian Codex"
+		}, {
 			["ID"]={96543, 96523, 96553, 96513, 96533},
 			["Name"]="Ocean-Hued Clam"
 		}, {
@@ -99,6 +102,9 @@ return {
 		}, {
 			["ID"]={62543, 62523, 62553, 62513, 62533},
 			["Name"]="Scholar"
+		}, {
+			["ID"]={37543, 37523, 37553, 37513, 37533},
+			["Name"]="Scroll of the Embered City's Hero"
 		}, {
 			["ID"]={93543, 93523, 93553, 93513, 93533},
 			["Name"]="Shimenawa's Reminiscence"
