@@ -104,7 +104,7 @@ return {
 			["Name"]="Scholar"
 		}, {
 			["ID"]={37543, 37523, 37553, 37513, 37533},
-			["Name"]="Scroll of the Embered City's Hero"
+			["Name"]="Scroll of the Hero of Cinder City"
 		}, {
 			["ID"]={93543, 93523, 93553, 93513, 93533},
 			["Name"]="Shimenawa's Reminiscence"
